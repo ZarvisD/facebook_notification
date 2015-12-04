@@ -1,0 +1,14 @@
+from twilio.rest import TwilioRestClient 
+from facebook import messages1
+ 
+# put your own credentials here www.twilio.com
+ACCOUNT_SID = "login into twilio account and look for api credentials" 
+AUTH_TOKEN = "same look for api credentials" 
+ 
+client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN) 
+ 
+client.messages.create(    
+to="number on which you want to recieve text",
+from_="your twilio number",
+body=messages1()
+)
